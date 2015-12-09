@@ -65,7 +65,7 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 	}
 
 	/**
-	 * 初始化TaskInfo列表值     2015.12.9 David.Ocean 改   修改TaskInfo中的 
+	 * 初始化TaskInfo列表值     2015.12.9  
 	 * @param file
 	 * @return
 	 */
