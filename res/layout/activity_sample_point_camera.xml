@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    tools:context=".SamplePointCameraActivity" >
+
+    <!-- <com.esri.android.viewer.widget.samplepoint.CameraPreview -->
+    <!-- android:id="@+id/esri_androidviewer_samplepoint_cameraPreview" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_alignParentTop="true" /> -->
+
+    <FrameLayout
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS信息"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/esri_androidviewer_colors_bgcolor"
+                android:textColorLink="@color/esri_androidviewer_colors_bgcolor" />
+
+            <TextView
+                android:id="@+id/activity_sample_point_camera_txtlocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="位置信息获取失败！\n正在尝试重新获取..."
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/esri_androidviewer_colors_bgcolor"
+                android:textColorLink="@color/esri_androidviewer_colors_bgcolor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="样本点采集"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/esri_androidviewer_colors_txt_red" />
+
+            <TextView
+                android:id="@+id/activity_sample_point_camera_txtorientation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Small Text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/esri_androidviewer_colors_bgcolor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统时间："
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/esri_androidviewer_colors_bgcolor"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/activity_sample_point_camera_timeinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/esri_androidviewer_colors_bgcolor"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/activity_sample_point_camera_btnCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:alpha="0.85"
+        android:src="@drawable/take_photo" />
+
+</RelativeLayout>

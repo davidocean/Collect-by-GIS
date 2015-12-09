@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<configuration>
+	<bing key="AiuQhAfOe3LdM-7gJ_sOsdf6Br1A8BhdZItn_hFmo-7Ca2jMK1GWCbWZmxeEoPJN"></bing>
+	<map initialextent=""><!-- 105.36724546700007  28.25111036060008 110.09844935100007 32.12748696140005 -->
+		<basemaps>
+		 <!-- 在线底图 -->
+		 <layer label="天地图-矢量"   type="dynamic"  visible="true"  url="http://www.digitalcq.com/RemoteRest/services/CQMap_VEC/MapServer"/>
+		 <layer label="天地图-影像"  type="dynamic" visible="false"  url="http://www.digitalcq.com/RemoteRest/services/CQMap_IMG/MapServer"/>
+        </basemaps>
+		<operationallayers>
+			<!--名称暂未修改，做离线地图图层列表使用 -->
+			<!-- <layer label="离线基础地图2"  visible="true"  type="local"  alpha="1"  url="file:///mnt/sdcard/ArcGISAndroidViewer/_BaseMap/china.tpk"/> -->
+		</operationallayers>
+    </map>
+    <menus>
+		<!--     	<widget label="图层设置"       classname="com.esri.android.viewer.widget.MapSettingsWidget" icon="com.esri.android.viewer.widget.MapSettingsWidget.png"  config=""/> -->
+		<!--     	<widget label="工作底图设置"       classname="com.esri.android.viewer.widget.work.WorkWidget" icon="com.esri.android.viewer.widget.work.WorkWidget.png"  config=""/> -->
+		<!--     	<widget label="任务包管理"  classname="com.esri.android.viewer.widget.task.TaskWidget" icon="com.esri.android.viewer.widget.task.TaskWidget.png" config=""/> -->
+		<!--      <widget label="成果包管理"  classname="com.esri.android.viewer.widget.achieve.AchieveWidget" icon="com.esri.android.viewer.widget.achieve.AchieveWidget.png" config=""/> -->
+		<!--   	<widget label="系统设置"   classname="com.esri.android.viewer.widget.AssignmentWidget" icon="com.esri.android.viewer.widget.AssignmentWidget.png" config=""/>      -->
+		<!--     	<widget label="关于"       classname="com.esri.android.viewer.widget.AboutWidget" icon="com.esri.android.viewer.widget.AboutWidget.png" config=""/>  -->
+    </menus>
+    <widgetcontainer>
+        <widget label=" 放大"  classname="com.esri.android.viewer.widget.ZoomInWidget" config="" icon="com.esri.android.viewer.widget.ZoomInWidget.png" />
+        <widget label=" 缩小 "classname="com.esri.android.viewer.widget.ZoomOutWidget" config="" icon="com.esri.android.viewer.widget.ZoomOutWidget.png"  />
+
+		<widget label=" 定位 "  classname="com.esri.android.viewer.widget.GPSWidget" icon="com.esri.android.viewer.widget.GPSWidget.png" config=""/>       		
+  		<widget label="书签管理"       classname="com.esri.android.viewer.widget.BookmarkWidget" icon="com.esri.android.viewer.widget.BookmarkWidget.png" config="BookmarkWidget.xml"/>
+  		<widget label="图层管理"       classname="com.esri.android.viewer.widget.MapSettingsWidget" icon="com.esri.android.viewer.widget.MapSettingsWidget.png"  config=""/>
+  		<widget label="要素采集"  classname="com.esri.android.viewer.widget.draw.DrawWidget" icon="com.esri.android.viewer.widget.draw.DrawWidget.png" config=""/>
+        <widget label="样本点采集"  classname="com.esri.android.viewer.widget.samplepoint.SamplePointWidget" icon="com.esri.android.viewer.widget.samplepoint.SamplePointWidget.png" config=""/>
+        <widget label="线路管理"  classname="com.esri.android.viewer.widget.path.PathWidget" icon="com.esri.android.viewer.widget.path.PathWidget.png" config="PathWidget.xml"/>
+		<widget label="位置管理"  classname="com.esri.android.viewer.widget.track.TrackWidget" icon="com.esri.android.viewer.widget.track.TrackWidget.png" config=""/>
+    	<widget label="  关于  "       classname="com.esri.android.viewer.widget.AboutWidget" icon="com.esri.android.viewer.widget.AboutWidget.png" config=""/> 
+         
+    </widgetcontainer>
+</configuration>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent" 
+  android:layout_height="wrap_content">
+  
+  	<LinearLayout android:id="@+id/esri_androidviewer_widget_mapsettings_listview_LinearLayoutLeft" 
+  	android:layout_alignParentLeft="true" android:orientation="horizontal" android:layout_centerVertical="true"
+  	android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5px">
+		
+	  	<ImageView
+	  	android:id="@+id/esri_androidviewer_widget_mapsettings_listview_ImageViewVisible"
+	  	android:layout_width="wrap_content" android:layout_marginLeft="5px" android:layout_marginRight="5px"
+	  	android:layout_height="wrap_content" android:layout_gravity="center" android:visibility="invisible"
+	  	android:src="@drawable/esri_androidviewer_drawable_visible"/>
+
+	  	
+  	</LinearLayout>
+  	
+  	<LinearLayout android:id="@+id/esri_androidviewer_widget_mapsettings_listview_LinearLayoutMore" 
+  	 android:layout_centerVertical="true"  android:layout_alignParentRight="true"
+  	 android:layout_marginLeft="5px" android:layout_marginRight="15px"
+  	android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+  	<Button
+  	    android:id="@+id/esri_androidviewer_widget_mapsettings_listview_ButtonMore"
+  	    android:layout_width="36dp"
+  	    android:layout_height="36dp"
+  	    android:layout_gravity="center"
+  	    android:background="@drawable/esri_androidviewer_drawable_more"
+  	    android:focusable="false" />
+
+  	</LinearLayout>
+
+  <LinearLayout
+  	android:orientation="vertical"
+  	android:layout_width="wrap_content" android:layout_centerVertical="true"
+  	android:layout_height="wrap_content"
+  	android:layout_toLeftOf="@+id/esri_androidviewer_widget_mapsettings_listview_LinearLayoutMore"
+  	android:layout_toRightOf="@+id/esri_androidviewer_widget_mapsettings_listview_LinearLayoutLeft">
+  	
+  		<TextView  android:id="@+id/esri_androidviewer_widget_mapsettings_listview_TextViewTitle" android:layout_margin="3px"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp"
+		android:singleLine="true" android:text="名称"/>
+		<TextView  android:id="@+id/esri_androidviewer_widget_mapsettings_listview_TextViewDesc" android:layout_margin="3px"
+		android:singleLine="true"  android:text="描述"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+  </LinearLayout>		
+  
+</RelativeLayout>
+

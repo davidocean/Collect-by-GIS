@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<configuration label="Paths (default)">
+    <paths>
+        <!-- 不可删除，不可修改，程序中必须保留一条记录否则无法完成添加工作 -->
+		<path name="##$$%%SDSFGSGVtest">8044000 1489000 15226000 7271000</path>
+    </paths>
+</configuration>

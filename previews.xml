@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<previews>
+
+    <preview
+        name="Config2"
+        activity="com.esri.android.viewer.widget.draw.DrawWidget"
+        config="layout-sw800dp-w800dp-h1280dp-xlarge-long-port-notnight-mdpi-finger-keyssoft-nokeys-navhidden-nonav-1280x800-v15"
+        device="10.1in WXGA (Tablet)"
+        devicestate="Portrait"
+        target="Android 4.0.3"
+        theme="@android:style/Theme.Holo" >
+    </preview>
+
+</previews>

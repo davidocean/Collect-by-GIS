@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                android:background="@color/esri_androidviewer_colors_bgcolor"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/esri_androidviewer_callout_Voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_mic" />
+
+                <ImageButton
+                    android:id="@+id/esri_androidviewer_callout_Camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_camera" />
+
+                <ImageButton
+                    android:id="@+id/esri_androidviewer_callout_Video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_video" />
+
+                <ImageButton
+                    android:id="@+id/esri_androidviewer_callout_Draft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_edit" />
+
+                <ImageButton
+                    android:id="@+id/esri_androidviewer_callout_Attribute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_view_as_list" />
+
+                <ImageButton
+                    android:id="@+id/esri_androidviewer_callout_MultiMedia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_attachment" />
+
+                <ImageButton
+                    android:id="@+id/esri_androidviewer_callout_Delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_discard" />
+
+                <ImageButton
+                    android:id="@+id/esri_androidviewer_callout_Cancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_undo" />
+            </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

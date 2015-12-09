@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ags_data_for_pie_chart_is_invalid">Data for pie chart is invalid.</string>
+    <string name="ags_media">Media</string>
+    <string name="ags_no_url_provided">No URL provided.</string>
+    <string name="ags_attachments">Attachments</string>
+    <string name="ags_retrieving_attachments">Retrieving attachments...</string>
+    <string name="ags_out_of_memory_when_retrieving_medium">Out of memory error when retrieving medium.</string>
+    <string name="ags_cannot_load_image">Cannot load image.</string>
+    <string name="ags_cannot_load_image_due_to_an_invalid_url">Cannot load image due to an invalid URL.</string>
+    <string name="ags_cannot_load_image_due_to_low_memory">Cannot load image due to low memory.</string>
+    <string name="ags_add_attachment">Add\nAttachment</string>
+    <string name="ags_size">Size</string>
+    <string name="ags_kilobyte_abbreviation">KB</string>
+    <string name="ags_megabyte_abbreviation">MB</string>
+    <string name="ags_type">Type</string>
+    <string name="ags_filetype_image">Image</string>
+    <string name="ags_filetype_word">Word</string>
+    <string name="ags_filetype_text">Text</string>
+    <string name="ags_filetype_pdf">PDF</string>
+    <string name="ags_filetype_video">Video</string>
+    <string name="ags_filetype_other">Other</string>
+    <string name="ags_attachment_does_not_exist_on_disk">Attachment does not exist on disk.</string>
+    <string name="ags_attachment_could_not_be_read_from_disk">Attachment could not be read from disk.</string>
+    <string name="ags_error">Error</string>
+    <string name="ags_view_pdf">View\nPDF</string>
+    <string name="ags_view_text">Text</string>
+    <string name="ags_view_video">Video</string>
+    <string name="ags_view_word">Word</string>
+    <string name="ags_view_other">Other</string>
+    <string name="ags_could_not_write_file_to_sd_card">Could not write file to SD card.</string>
+    <string name="ags_delete">Delete</string>
+    <string name="ags_open">Open</string>
+    <string name="ags_download">Download</string>
+    <string name="ags_no_application_available_to_view_this_file_type">No application available to view this file type.</string>
+    <string name="ags_cannot_exceed_maximum_date">Cannot exceed maximum date</string>
+    <string name="ags_cannot_exceed_minimum_date">Cannot exceed minimum date</string>
+</resources>

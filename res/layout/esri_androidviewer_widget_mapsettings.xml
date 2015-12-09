@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" 
+  android:layout_width="fill_parent"   android:layout_height="match_parent">
+  
+	<ViewFlipper android:id="@+id/esri_androidviewer_widget_mapsettings_ViewFlipper"  
+	    android:layout_width="fill_parent"  android:layout_height="match_parent"
+	    android:focusableInTouchMode="true" android:focusable="true"
+	    android:persistentDrawingCache="animation">
+	    
+   <LinearLayout
+       android:layout_width="fill_parent"
+       android:layout_height="match_parent"
+       android:background="@drawable/esri_androidviewer_drawable_transparence"
+       android:orientation="vertical" >
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="34dp"
+           android:gravity="left" >
+
+           <TextView
+               android:id="@+id/textView1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentLeft="true"
+               android:layout_marginBottom="3dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="3dp"
+               android:text="底图列表" 
+               android:textAppearance="?android:attr/textAppearanceMedium" />
+
+           <Switch
+               android:id="@+id/esri_androidviewer_widget_mapsettings_switchOnlineMap"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentRight="true"
+               android:layout_marginRight="5dp"
+               android:layout_marginTop="5dp"
+               android:text="在线底图" />
+
+       </RelativeLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:alpha="0.3"
+           android:background="@color/esri_androidviewer_colors_white"
+           android:orientation="vertical" >
+
+       </LinearLayout>
+    
+          	<ListView
+          	    android:id="@+id/esri_androidviewer_widget_mapsettings_ListView"
+          	    android:layout_width="fill_parent"
+          	    android:layout_height="match_parent" />
+            
+</LinearLayout>
+   
+  <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+  
+   <Button android:text="返回"  android:id="@+id/esri_androidviewer_widget_mapsettings_ButtonReturn"
+    android:layout_margin="3dip"  android:textSize="@dimen/sp_16" 
+    android:layout_width="wrap_content" android:layout_height="38dp" 
+    />
+    <View android:background="#FFFFFF"
+    android:layout_width="wrap_content" android:layout_height="1px"/>
+    
+    <ScrollView
+    android:layout_width="fill_parent" android:layout_height="wrap_content"    android:orientation="vertical"
+    android:layout_marginTop="6dip">
+   
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="match_parent" android:orientation="vertical">
+ 
+ 	<TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="1"
+ 	     android:layout_marginLeft="10dip" android:layout_marginRight="10dip">
+ 		<View android:layout_width="fill_parent" android:layout_height="2px"/>
+ 		<TableRow>
+ 			<TextView android:text="透明度" android:layout_gravity="left|center_vertical" android:gravity="left"/>
+			<LinearLayout android:layout_marginLeft="5dip" android:layout_marginRight="5dip">
+			<SeekBar android:gravity="center" android:layout_gravity="center" android:max="100" 
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/esri_androidviewer_widget_mapsettings_SeekBarOpacity"/></LinearLayout>
+			<TextView android:id="@+id/esri_androidviewer_widget_mapsettings_TextViewOpacity"
+			android:text="0" android:layout_gravity="center" android:gravity="right" android:layout_marginRight="5dip" />
+ 		</TableRow>
+ 		<View android:layout_width="fill_parent" android:layout_height="2px"/>
+
+ 		<TableRow android:visibility="invisible" >
+
+ 		 	<TextView android:text="亮度" android:layout_gravity="left|center_vertical" android:gravity="left"/>
+			<LinearLayout android:layout_marginLeft="5dip" android:layout_marginRight="5dip">
+			<SeekBar android:gravity="center" android:layout_gravity="center" android:max="100"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/esri_androidviewer_widget_mapsettings_SeekBarBrightness"/></LinearLayout>
+			<TextView android:id="@+id/esri_androidviewer_widget_mapsettings_TextViewBrightness"
+			android:text="0" android:layout_gravity="center" android:gravity="right" android:layout_marginRight="5dip" />
+ 		</TableRow>
+ 		<View android:layout_width="fill_parent" android:layout_height="2px"/>
+
+ 		<TableRow android:visibility="invisible" >
+
+ 		 	<TextView android:text="对比度" android:layout_gravity="left|center_vertical" android:gravity="left"/>
+			<LinearLayout android:layout_marginLeft="5dip" android:layout_marginRight="5dip">
+			<SeekBar android:gravity="center" android:layout_gravity="center" android:max="100"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/esri_androidviewer_widget_mapsettings_SeekBarContrast"/></LinearLayout>
+			<TextView android:id="@+id/esri_androidviewer_widget_mapsettings_TextViewContrast"
+			android:text="0" android:layout_gravity="center" android:gravity="right" android:layout_marginRight="5dip" />
+ 		</TableRow>
+ 	</TableLayout>
+ 
+ <LinearLayout android:id="@+id/esri_androidviewer_widget_mapsettings_LinearLayoutSubLayer" 
+    android:layout_width="fill_parent" android:layout_height="wrap_content"    android:orientation="vertical"
+    android:layout_marginTop="6dip"/>
+    
+</LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+</ViewFlipper>
+
+</LinearLayout>
+

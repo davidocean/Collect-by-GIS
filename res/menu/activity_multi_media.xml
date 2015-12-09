@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+<!--       <item android:id="@+id/menu_camera" -->
+<!--           android:title="@string/multi_media_activity_camera" -->
+<!--           android:icon="@drawable/multi_media_activity_camera" -->
+<!--           android:showAsAction="ifRoom" /> -->
+    
+<!--      <item android:id="@+id/menu_video" -->
+<!--           android:title="@string/multi_media_activity_video" -->
+<!--           android:icon="@drawable/multi_media_activity_video" -->
+<!--           android:showAsAction="ifRoom" /> -->
+        
+<!--       <item android:id="@+id/menu_voice" -->
+<!--           android:title="@string/multi_media_activity_voice" -->
+<!--           android:icon="@drawable/multi_media_activity_voice" -->
+<!--           android:showAsAction="ifRoom" /> -->
+            
+<!--        <item android:id="@+id/menu_sketch" -->
+<!--           android:title="@string/multi_media_activity_sketch" -->
+<!--           android:icon="@drawable/multi_media_activity_sketch" -->
+<!--           android:showAsAction="ifRoom" /> -->
+  
+
+</menu>

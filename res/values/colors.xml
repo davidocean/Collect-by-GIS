@@ -1,0 +1,7 @@
+<resources>
+   <color name="esri_androidviewer_colors_bgcolor">#000000</color>
+   <color name="esri_androidviewer_colors_white">#ffffff</color>
+   <color name="esri_androidviewer_colors_background">#0b408a</color>      
+   <color name="esri_androidviewer_colors_txt_red">#DC143C</color>      
+</resources>
+

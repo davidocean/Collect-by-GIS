@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dip"
+    android:gravity="fill" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/view_taskpackage_list_online_item_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="  图层: "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/esri_androidviewer_draw_SpinnerLayer"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@color/esri_androidviewer_colors_bgcolor"
+                android:entries="@array/esri_androidviewer_arrays_update" />
+
+            <Button
+                android:id="@+id/esri_androidviewer_draw_BtnLoadFeature"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="65dp"
+                android:layout_height="40dp"
+                android:text="加载"
+                android:textSize="@dimen/sp_16" />
+
+            <Button
+                android:id="@+id/esri_androidviewer_draw_BtnWorkLog"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="65dp"
+                android:layout_height="40dp"
+                android:text="日志"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/esri_androidviewer_draw_ImageViewSimplePoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/esri_androidviewer_drawable_sim_point_big_off"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/esri_androidviewer_draw_ImageViewPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1dp"
+                        android:src="@drawable/esri_androidviewer_drawable_point" />
+
+                    <ImageView
+                        android:id="@+id/esri_androidviewer_draw_ImageViewFreeline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1dp"
+                        android:src="@drawable/esri_androidviewer_drawable_freeline" />
+
+                    <ImageView
+                        android:id="@+id/esri_androidviewer_draw_ImageViewLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1dp"
+                        android:src="@drawable/esri_androidviewer_drawable_polyline" />
+
+                    <ImageView
+                        android:id="@+id/esri_androidviewer_draw_ImageViewFreePolygon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1dp"
+                        android:src="@drawable/esri_androidviewer_drawable_freepolygon" />
+
+                    <ImageView
+                        android:id="@+id/esri_androidviewer_draw_ImageViewPolygon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1dp"
+                        android:src="@drawable/esri_androidviewer_drawable_polygon" />
+
+                    <ImageView
+                        android:id="@+id/esri_androidviewer_draw_ImageViewClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:src="@drawable/esri_androidviewer_drawable_i_clear" />
+
+                    <ToggleButton
+                        android:id="@+id/esri_androidviewer_draw_toggleBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="3dp"
+                        android:text="标注"
+                        android:textOff="标注"
+                        android:textOn="标注"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/activity_sample_point_camera_txtorientation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="红色-原始；黄色-新建；绿色-已核查   "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/esri_androidviewer_draw_TxtScale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

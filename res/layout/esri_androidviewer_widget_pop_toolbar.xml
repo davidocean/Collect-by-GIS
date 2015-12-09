@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content" android:background="@drawable/esri_androidviewer_drawable_own_toolbar"
+  android:orientation="horizontal"
+  android:layout_height="wrap_content">
+  
+    <HorizontalScrollView android:id="@+id/esri_androidviewer_widget_pop_toolbar_HorizontalScrollView" android:scrollbars="none"
+    android:layout_width="wrap_content"  android:layout_height="wrap_content">
+    
+    	<LinearLayout
+    	    android:id="@+id/esri_androidviewer_widget_pop_toolbar_LinearLayout"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:orientation="horizontal" />
+
+   </HorizontalScrollView>
+
+</LinearLayout >

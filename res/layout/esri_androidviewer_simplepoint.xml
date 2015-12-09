@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:gravity="right"
+    android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp" >
+
+            <Button
+                android:id="@+id/esri_androidviewer_samplepoint_btncollect"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="采集"
+                android:textSize="@dimen/sp_16" />
+
+            <Button
+                android:id="@+id/esri_androidviewer_samplepoint_btnView"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="显示"
+                android:textSize="@dimen/sp_16" />
+
+            <Button
+                android:id="@+id/esri_androidviewer_samplepoint_btnClear"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="清除"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+</RelativeLayout>
+        

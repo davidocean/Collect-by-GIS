@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DraftActivity" >
+
+    <com.esri.android.viewer.draft.PaintView
+        android:id="@+id/esri_androidviewer_draftpanal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageButton
+        android:id="@+id/esri_androidviewer_draft_screenshot"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/esri_androidviewer_draft_screenshot" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <ImageButton
+            android:id="@+id/esri_androidviewer_draft_color"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/esri_androidviewer_draft_color" />
+
+        <ImageButton
+            android:id="@+id/esri_androidviewer_draft_penwidth"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/esri_androidviewer_draft_path" />
+    
+        <ImageButton
+	        android:id="@+id/esri_androidviewer_draft_clear"
+	        android:layout_width="45dp"
+	        android:layout_height="45dp"
+	        android:src="@drawable/esri_androidviewer_draft_remove" />
+        
+    </LinearLayout>
+
+
+
+</RelativeLayout>

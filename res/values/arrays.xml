@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <resources>
+        <string-array name="esri_androidviewer_arrays_update">
+            <item>Not Automatically Update</item>
+            <item>Every Week</item>
+            <item>Every Month</item>
+            <item>Right Now</item> 
+        </string-array>
+        
+        <string-array name="esri_androidviewer_arrays_update_value">
+            <item>0</item>
+            <item>1</item>
+            <item>2</item>
+            <item>3</item>
+        </string-array>
+        
+    </resources>

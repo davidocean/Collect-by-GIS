@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    
+<PreferenceCategory android:title="General">
+	<CheckBoxPreference
+	android:title="Screen On"
+	android:defaultValue="false"
+	android:summary="The screen will always be on"
+	android:key="checkboxScreenOn" />
+	
+	 <Preference
+	android:title="Restore initial mode"
+	android:summary="Just like dothing at the beginning"
+	android:key="restore" />
+
+</PreferenceCategory>
+<PreferenceCategory android:title="Upgrade Settings">
+	<ListPreference
+	android:title="Check Update"
+	android:summary=""
+	android:defaultValue="0"
+	android:key="ListPreferenceUpdate"
+	android:entries="@array/esri_androidviewer_arrays_update"
+	android:entryValues="@array/esri_androidviewer_arrays_update_value" />
+</PreferenceCategory>
+</PreferenceScreen>
