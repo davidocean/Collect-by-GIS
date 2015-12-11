@@ -84,7 +84,7 @@ public class UserLoginActivity extends Activity {
 	            .penaltyDeath()     
 	            .build());  */  
     	//requestWindowFeature(Window.FEATURE_NO_TITLE);// 填充标题栏
-		setContentView(R.layout.activity_user_login);
+		setContentView(R.layout.activity_user_login_1);
 	
 		com.esri.android.viewer.tools.sysTools.intiWorkspaceDir(this);//系统工作目录初始化
 		
@@ -341,11 +341,11 @@ public class UserLoginActivity extends Activity {
 	            return super.onOptionsItemSelected(item);
 	        }
 	    }
-	
+	//修改  2015-12-10  by David.Ocean
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_userlogin, menu);
+//		getMenuInflater().inflate(R.menu.activity_userlogin, menu);
 		return true;//显示菜单
 	}
 

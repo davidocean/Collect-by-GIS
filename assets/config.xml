@@ -28,9 +28,9 @@
   		<widget label="书签管理"       classname="com.esri.android.viewer.widget.BookmarkWidget" icon="com.esri.android.viewer.widget.BookmarkWidget.png" config="BookmarkWidget.xml"/>
   		<widget label="图层管理"       classname="com.esri.android.viewer.widget.MapSettingsWidget" icon="com.esri.android.viewer.widget.MapSettingsWidget.png"  config=""/>
   		<widget label="要素采集"  classname="com.esri.android.viewer.widget.draw.DrawWidget" icon="com.esri.android.viewer.widget.draw.DrawWidget.png" config=""/>
-        <widget label="样本点采集"  classname="com.esri.android.viewer.widget.samplepoint.SamplePointWidget" icon="com.esri.android.viewer.widget.samplepoint.SamplePointWidget.png" config=""/>
+       <!-- <widget label="样本点采集"  classname="com.esri.android.viewer.widget.samplepoint.SamplePointWidget" icon="com.esri.android.viewer.widget.samplepoint.SamplePointWidget.png" config=""/> --> 
         <widget label="线路管理"  classname="com.esri.android.viewer.widget.path.PathWidget" icon="com.esri.android.viewer.widget.path.PathWidget.png" config="PathWidget.xml"/>
-		<widget label="位置管理"  classname="com.esri.android.viewer.widget.track.TrackWidget" icon="com.esri.android.viewer.widget.track.TrackWidget.png" config=""/>
+		<!-- <widget label="位置管理"  classname="com.esri.android.viewer.widget.track.TrackWidget" icon="com.esri.android.viewer.widget.track.TrackWidget.png" config=""/> -->
     	<widget label="  关于  "       classname="com.esri.android.viewer.widget.AboutWidget" icon="com.esri.android.viewer.widget.AboutWidget.png" config=""/> 
          
     </widgetcontainer>

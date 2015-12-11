@@ -76,7 +76,7 @@ public class GeoDateTool {
 	    						Graphic graphic =null;
 	    						switch(f_type){
 	    							case 1://默认加载
-	    								graphic = new Graphic(polyline, FeatureSymbol.lineSymbol_old,graphics[i].getAttributes(), (Integer) null);
+	    								graphic = new Graphic(polyline, FeatureSymbol.lineSymbol_old,graphics[i].getAttributes());
 	    								break;
 	    							case 2://新增要素
 	    								graphic = new Graphic(polyline, FeatureSymbol.lineSymbol_new,graphics[i].getAttributes());

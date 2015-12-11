@@ -288,7 +288,7 @@ public class AttributeActivity extends Activity {
 													+FeatureLogState.featureUpdate+","
 													+"'"+attributelist.get(position).key+":"+oldStr+">"+str+"')";
 											db.exec(sqlStr, null);
-											db.exec(sqllog, null);//日志
+//											db.exec(sqllog, null);//日志  修改 2015-12-11 by David.Ocean 取消log的写入
 											db.close();
 											holder.editText.setText(str);
 											Toast.makeText(AttributeActivity.this,
@@ -376,7 +376,7 @@ public class AttributeActivity extends Activity {
 															+FeatureLogState.featureUpdate+","
 															+"'"+attributelist.get(position).key+":"+oldStr+">"+str+"')";
 													db.exec(sqlStr, null);
-													db.exec(sqllog, null);//日志
+//													db.exec(sqllog, null);//日志  修改 2015-12-11 by David.Ocean 取消logs写入
 													db.close();
 													holder.editText.setText(str);
 													Toast.makeText(

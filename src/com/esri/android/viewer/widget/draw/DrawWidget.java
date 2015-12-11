@@ -888,7 +888,7 @@ public class DrawWidget extends BaseWidget
 					
 					try{				
 						try {
-							db.exec(sqllog, null);//日志
+//							db.exec(sqllog, null);//日志   修改  2015-12-11  by David.Ocean  取消读取
 						} catch (Exception e) {
 							Toast.makeText(DrawWidget.super.context,"任务包日志写入失败！"+e.toString(),Toast.LENGTH_SHORT).show();
 						}
@@ -1380,7 +1380,7 @@ public class DrawWidget extends BaseWidget
 				Database db= new Database();
 				db.open(dbFile,2);
 				try {
-					db.exec(sqllog, null);//日志
+//					db.exec(sqllog, null);//日志 修改  2015-12-11  by David.Ocean  取消读取
 				} catch (Exception e) {
 					 Toast.makeText(DrawWidget.super.context,"任务包日志写入失败！"+e.toString(),Toast.LENGTH_SHORT).show();
 					return null;

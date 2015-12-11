@@ -83,7 +83,7 @@ public class sqliteHelper {
 	    	   try {
 				mDb.execSQL(sqlStrBookMark);//创建书签表
 				mDb.execSQL(sqlStrRoutePath);//创建路径表
-				mDb.execSQL(sqlStrSyslog);//创建系统日志
+//				mDb.execSQL(sqlStrSyslog);//创建系统日志   修改 2015-12-11  by David.Ocean 
 				mDb.execSQL(sqlStrBizLocation);//创建位置信息表
 				mDb.execSQL(sqlStrLocal_USERS);//创建本地用户表
 				mDb.execSQL(sqlStr_TaskDownload);//创建任务信息表

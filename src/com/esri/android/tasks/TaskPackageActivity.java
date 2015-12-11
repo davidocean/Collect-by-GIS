@@ -65,8 +65,8 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 	}
 
 	/**
-	 * 初始化TaskInfo列表值     2015.12.9  
-	 * @param file
+	 * 初始化TaskInfo列表值          修改  2015-12-9  by David.Ocean   实现通用性
+	 * @param file         
 	 * @return
 	 */
 	private TaskInfo AddTaskInfo(file file) {
@@ -74,26 +74,28 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 			 TaskInfo taskinfo =null;
 			 String dbpath = file.path +"/"+file.item+".sqlite"; 
 			 SQLiteDatabase mDb = SQLiteDatabase.openDatabase(dbpath, null, 0);
-			 Cursor cursor = mDb.query("BIZ_TASKS", new String[] {
-					"F_TASKID", "F_NAME" ,"F_DESC","F_DISTRIBUTOR","F_EXECUTOR","F_DEADLINE"}, null, null,
-					null, null, null);
-			 cursor.moveToFirst();
+			 
+			 //注销掉，让这些读取都固定化。
+//			 Cursor cursor = mDb.query("BIZ_TASKS", new String[] {
+//					"F_TASKID", "F_NAME" ,"F_DESC","F_DISTRIBUTOR","F_EXECUTOR","F_DEADLINE"}, null, null,
+//					null, null, null);
+//			 cursor.moveToFirst();
 			 taskinfo = new TaskInfo();
-			 int id = cursor.getInt(cursor.getColumnIndex("F_TASKID"));
-			 String name = cursor.getString(cursor.getColumnIndex("F_NAME"));
-			 String desc = cursor.getString(cursor.getColumnIndex("F_DESC"));
-			 int distri = cursor.getInt(cursor.getColumnIndex("F_DISTRIBUTOR"));
-			 int execut = cursor.getInt(cursor.getColumnIndex("F_EXECUTOR"));
-			 String deadline = cursor.getString(cursor.getColumnIndex("F_DEADLINE"));
+//			 int id = cursor.getInt(cursor.getColumnIndex("F_TASKID"));
+//			 String name = cursor.getString(cursor.getColumnIndex("F_NAME"));
+//			 String desc = cursor.getString(cursor.getColumnIndex("F_DESC"));
+//			 int distri = cursor.getInt(cursor.getColumnIndex("F_DISTRIBUTOR"));
+//			 int execut = cursor.getInt(cursor.getColumnIndex("F_EXECUTOR"));
+//			 String deadline = cursor.getString(cursor.getColumnIndex("F_DEADLINE"));
 			 
 			 taskinfo.filename = file.item;
 			 taskinfo.filepath = file.path;
-			 taskinfo.id = id;
-			 taskinfo.name = name;
-			 taskinfo.desc = desc;
-			 taskinfo.distributor_id = distri;
-			 taskinfo.executor_id = execut;		
-			 taskinfo.deadline = deadline;
+			 taskinfo.id = 0;
+			 taskinfo.name = file.item;
+			 taskinfo.desc = file.item;
+			 taskinfo.distributor_id = 0;
+			 taskinfo.executor_id = 0;		
+			 taskinfo.deadline = "2016-12-12";
 			 return taskinfo;
 		 } catch (Exception e) {
 				// TODO: handle exception
@@ -213,16 +215,16 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 		//添加并且显示
 		tasklistView.setAdapter(adapter);
 	}
-	
+	//修改  2015.12.9   by David.Ocean   去掉网络设置和服务地址设置
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		
 	    int base = Menu.FIRST;
 		menu.add(base, base+1, base+1, "任务包管理");
         menu.add(base, base+2, base+2, "底图包管理");
-        menu.add(base, base+3, base+3, "网络设置");
+//        menu.add(base, base+3, base+3, "网络设置");
         menu.add(base, base+4, base+4, "GPS设置");
-        menu.add(base, base+5, base+5, "服务地址设置");
+//        menu.add(base, base+5, base+5, "服务地址设置");
         getMenuInflater().inflate(R.menu.activity_task_package, menu);
 	    // 显示菜单
 	    return true;
@@ -340,15 +342,16 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 	        	notifyDataSetChanged();//刷新数据
 	        } 
 	        
+	        //修改  2015-12-9  by David.Ocean
 	        public View getView(final int position, View convertView, ViewGroup parent) {
 	        	TaskViewHolder holder = null;
 	            if (convertView == null) {
 	                holder=new TaskViewHolder();  
-	                convertView = mInflater.inflate(R.layout.view_task_package_list_item, null);
-	                holder.id = (TextView)convertView.findViewById(R.id.view_task_package_list_item_id);
+	                convertView = mInflater.inflate(R.layout.view_task_package_list_item_2, null);
+//	                holder.id = (TextView)convertView.findViewById(R.id.view_task_package_list_item_id);
 	                holder.name = (TextView)convertView.findViewById(R.id.view_taskpackage_list_online_item_title);
-	                holder.desc = (TextView)convertView.findViewById(R.id.view_task_package_list_item_remark);
-	                holder.endtime = (TextView)convertView.findViewById(R.id.view_task_package_list_item_endtime);
+//	                holder.desc = (TextView)convertView.findViewById(R.id.view_task_package_list_item_remark);
+//	                holder.endtime = (TextView)convertView.findViewById(R.id.view_task_package_list_item_endtime);
 	                holder.path = (TextView)convertView.findViewById(R.id.view_task_package_list_item_path);
 	                holder.BtnIntomap =(Button)convertView.findViewById(R.id.view_taskpackage_item_btnintomap);
 	                holder.BtnInfo = (Button)convertView.findViewById(R.id.view_taskpackage_item_btninfo);
@@ -357,10 +360,10 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 	            }else {
 	                holder = (TaskViewHolder)convertView.getTag();
 	            }
-	            holder.id.setText(String.valueOf(taskinfolist.get(position).id));
+//	            holder.id.setText(String.valueOf(taskinfolist.get(position).id));
 	            holder.name.setText((String)taskinfolist.get(position).name);
-	            holder.desc.setText((String)taskinfolist.get(position).desc);
-	            holder.endtime.setText(String.valueOf(taskinfolist.get(position).deadline));  
+//	            holder.desc.setText((String)taskinfolist.get(position).desc);
+//	            holder.endtime.setText(String.valueOf(taskinfolist.get(position).deadline));  
 	            String strpath ="/"+com.esri.android.viewer.tools.SystemVariables.taskPackageDirectory
 	            		+"/"+taskinfolist.get(position).filename;
 				holder.path.setText(strpath);
