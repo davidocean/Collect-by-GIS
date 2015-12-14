@@ -76,6 +76,7 @@ public class ViewerActivity extends BaseViewerActivity {
         //获取上一个页面的传值（要素多媒体存储路径）
 	    Bundle bundle = getIntent().getExtras();  
 	    this.taskpath = bundle.getString("taskpath");  
+	    //修改  提示   taskID == 坐标系wkid
 	    this.taskid = bundle.getInt("taskID");
 	    this.taskname = bundle.getString("tasppackagename")+".sqlite";  
 	    
@@ -152,7 +153,8 @@ public class ViewerActivity extends BaseViewerActivity {
     {
     	//加入一个空图层
 		//说明：默认初始化时mMapView的空间参考和显示范围受限于第一个加进来的图层，切换离线时范围受限，加入一个带空间参考的空图层，可解决该问题
-		GraphicsLayer layer = new GraphicsLayer(localspatialReference.spatialReferencePM,null) ;
+//		GraphicsLayer layer = new GraphicsLayer(localspatialReference.spatialReferencePM,null) ;
+    	GraphicsLayer layer = new GraphicsLayer(localspatialReference.getTaskSpatialReference(taskid),null) ;
 		mMapView.addLayer(layer);
 		mConfigEntity = getConfig();//read information from xml file
 			

@@ -80,6 +80,11 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 //					"F_TASKID", "F_NAME" ,"F_DESC","F_DISTRIBUTOR","F_EXECUTOR","F_DEADLINE"}, null, null,
 //					null, null, null);
 //			 cursor.moveToFirst();
+			 //读取表中的task_extent表中的srid字段  读取坐标系的字段，进行传递。
+			 Cursor cursor=mDb.query("geometry_columns", new String[]{"srid"}, null, null, null, null, null);
+			 cursor.moveToFirst();
+			 int sr_int=cursor.getInt(cursor.getColumnIndex("srid"));
+			 
 			 taskinfo = new TaskInfo();
 //			 int id = cursor.getInt(cursor.getColumnIndex("F_TASKID"));
 //			 String name = cursor.getString(cursor.getColumnIndex("F_NAME"));
@@ -88,9 +93,11 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 //			 int execut = cursor.getInt(cursor.getColumnIndex("F_EXECUTOR"));
 //			 String deadline = cursor.getString(cursor.getColumnIndex("F_DEADLINE"));
 			 
+			 
 			 taskinfo.filename = file.item;
 			 taskinfo.filepath = file.path;
-			 taskinfo.id = 0;
+			 //修改  借用takinfo.id作为坐标系wkid的字段 2015-12-14 by David.Ocean
+			 taskinfo.id = sr_int;
 			 taskinfo.name = file.item;
 			 taskinfo.desc = file.item;
 			 taskinfo.distributor_id = 0;
@@ -348,7 +355,8 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 	            if (convertView == null) {
 	                holder=new TaskViewHolder();  
 	                convertView = mInflater.inflate(R.layout.view_task_package_list_item_2, null);
-//	                holder.id = (TextView)convertView.findViewById(R.id.view_task_package_list_item_id);
+	                //id 作为坐标系的显示
+	                holder.id = (TextView)convertView.findViewById(R.id.view_task_package_list_item_id);
 	                holder.name = (TextView)convertView.findViewById(R.id.view_taskpackage_list_online_item_title);
 //	                holder.desc = (TextView)convertView.findViewById(R.id.view_task_package_list_item_remark);
 //	                holder.endtime = (TextView)convertView.findViewById(R.id.view_task_package_list_item_endtime);
@@ -360,7 +368,8 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 	            }else {
 	                holder = (TaskViewHolder)convertView.getTag();
 	            }
-//	            holder.id.setText(String.valueOf(taskinfolist.get(position).id));
+	            //id作为坐标系的显示
+	            holder.id.setText(String.valueOf(taskinfolist.get(position).id));
 	            holder.name.setText((String)taskinfolist.get(position).name);
 //	            holder.desc.setText((String)taskinfolist.get(position).desc);
 //	            holder.endtime.setText(String.valueOf(taskinfolist.get(position).deadline));  
@@ -376,6 +385,7 @@ public class TaskPackageActivity extends BaseTaskPackageActivity {
 						 Bundle bundle = new Bundle();
 						 String taskpath = taskinfolist.get(position).filepath;
 						 String tasppackagename = taskinfolist.get(position).filename;
+						 //修改   提示    taskID，现在视为 坐标系wkid
 						 bundle.putInt("taskID", taskinfolist.get(position).id);
 						 //bundle.putInt("userID", taskinfolist.get(position).executor_id);//执行人ID
 						 bundle.putString("taskpath", taskpath);//数据库地址

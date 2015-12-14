@@ -19,7 +19,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
+ <TextView
+                    android:id="@+id/downloading_filename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:text="坐标系WKID：" />
 
+                <TextView
+                    android:id="@+id/view_task_package_list_item_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp" />
               
 
 

@@ -1034,8 +1034,9 @@ public class DrawWidget extends BaseWidget
 		private Point getPoint(double lo, double la)
 		{
 			Point p = new Point(lo,la);
-			SpatialReference sr = SpatialReference.create(4326);
-			Point ptMap = (Point)GeometryEngine.project(p, sr,localspatialReference.spatialReferencePM);
+			SpatialReference sr = SpatialReference.create(4326);//4326 是 WGS1984的地理坐标系
+//			Point ptMap = (Point)GeometryEngine.project(p, sr,localspatialReference.spatialReferencePM);
+			Point ptMap = (Point)GeometryEngine.project(p, sr,localspatialReference.getTaskSpatialReference(ViewerActivity.taskid));			
 			return ptMap;
 		}
 		
@@ -1360,7 +1361,9 @@ public class DrawWidget extends BaseWidget
     		//调用LocalAdd类来保存数据
     		LocalAdd localAdd = new LocalAdd();
     		localAdd.setGraphics(new Graphic[]{graphicPM});
-    		localAdd.setSpatialReference(localspatialReference.spatialReferencePM);//设置空间参考为4490
+ //   		localAdd.setSpatialReference(localspatialReference.spatialReferencePM);//设置空间参考为4490
+    		//修改   让坐标系的设定与任务包相同      2015.12.14  by David.Ocean
+    		localAdd.setSpatialReference(localspatialReference.getTaskSpatialReference(ViewerActivity.taskid));
     		localAdd.setTableName(editLayerName);
     		
     		// dbFile是string类型的参数，指数据库文件在SD卡上的存储路径
